@@ -2,10 +2,10 @@ services:
   - type: web
     name: legal-doc-backend
     env: python
-    buildCommand: cd backend && pip install -r requirements-simple.txt
-    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
+    buildCommand: pip install -r requirements-ultra-simple.txt
+    startCommand: cd backend && uvicorn main-simple:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
-        value: 3.9.18
+        value: 3.11.9
       - key: PORT
         value: 8000

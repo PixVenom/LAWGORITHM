@@ -1,0 +1,16 @@
+# Ultra-simple requirements for cloud deployment
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+pydantic==2.4.2
+python-dotenv==1.0.0
+aiofiles==23.2.1
+
+# Basic OCR and PDF processing
+pytesseract==0.3.10
+PyPDF2==3.0.1
+
+# Basic utilities
+numpy==1.24.3
+pandas==2.0.3
+langdetect==1.0.9
