@@ -88,7 +88,7 @@ Always be helpful, accurate, and remind users that you provide general informati
             loop = asyncio.get_event_loop()
             response = await loop.run_in_executor(
                 None,
-                lambda: openai.ChatCompletion.create(
+                lambda: openai.chat.completions.create(
                     model="gpt-3.5-turbo",
                     messages=[
                         {"role": "system", "content": system_prompt},
