@@ -1,0 +1,16 @@
+# Simple requirements for backend deployment
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+pydantic==2.5.0
+python-dotenv==1.0.0
+aiofiles==23.2.1
+
+# Basic OCR
+pytesseract==0.3.10
+PyPDF2==3.0.1
+
+# Basic utilities
+numpy>=1.24.0
+pandas>=2.0.0
+langdetect>=1.0.0
