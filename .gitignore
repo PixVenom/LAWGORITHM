@@ -174,3 +174,16 @@ dmypy.json
 
 # ASSETS folder - exclude all files to avoid large file issues
 ASSETS/
+
+# Google Cloud credentials
+gcp-key.json
+backend/gcp-key.json
+*.json
+!package.json
+!package-lock.json
+
+# Environment files
+.env
+backend/.env
+.env.local
+.env.production
