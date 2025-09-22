@@ -41,6 +41,10 @@ gcloud iam service-accounts create legal-doc-service \
     --display-name="Legal Doc Service" \
     --project=$PROJECT_ID
 
+# Wait for service account to be created
+echo "⏳ Waiting for service account to be created..."
+sleep 10
+
 # Grant permissions
 echo "🔐 Granting permissions..."
 gcloud projects add-iam-policy-binding $PROJECT_ID \
@@ -53,11 +57,11 @@ gcloud projects add-iam-policy-binding $PROJECT_ID \
 
 gcloud projects add-iam-policy-binding $PROJECT_ID \
     --member="serviceAccount:legal-doc-service@$PROJECT_ID.iam.gserviceaccount.com" \
-    --role="roles/vision.admin"
+    --role="roles/vision.user"
 
 gcloud projects add-iam-policy-binding $PROJECT_ID \
     --member="serviceAccount:legal-doc-service@$PROJECT_ID.iam.gserviceaccount.com" \
-    --role="roles/translate.admin"
+    --role="roles/translate.user"
 
 # Create storage bucket
 BUCKET_NAME="legal-doc-simplifier-$PROJECT_ID"
